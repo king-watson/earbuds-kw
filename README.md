@@ -2,7 +2,7 @@
 
 Welcome! This project showcases my creative process in designing and developing a unique pair of earbuds and their charging case. It highlights my exploration of form, function, and user experience — blending product design, 3D modeling, and visual storytelling to create an innovative and engaging concept.
 
-![my portfoilio](images/readme-image.jpg)
+![my earbuds](images/kingbuds-readme.jpg)
 
 ## Project Objectives 📑<br/>
 Explore Innovative Design: Develop a unique and modern concept for earbuds and a charging case that stand out through form, color, and usability.
