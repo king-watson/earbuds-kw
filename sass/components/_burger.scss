@@ -93,13 +93,7 @@ header {
     height: auto;
   }
 
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
+ 
   #hamburger, #close {
     display: none;
   }
@@ -116,11 +110,34 @@ header {
 
   #menu ul {
     display: flex;
+    margin-top: 45px;
   }
 
   #menu ul li {
     display: inline;
     margin: 0 20px 0 0;
   }
+
+  #menu ul li a {
+  color: yellow;
+  text-decoration: none;
+  transition: color 0.3s ease; 
+}
+
+#menu ul li a:hover {
+  color: white;
+}
+
+
+  #menu a:hover {
+  color: white;
+}
+
+#header-logo img {
+  height: 100px; 
+  width: auto;
+  margin-right: 0;
+  padding-left: 0;
+}
 
 }
