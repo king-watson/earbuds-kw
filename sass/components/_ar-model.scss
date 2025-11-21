@@ -99,6 +99,14 @@ opacity: 0;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
 
+   .hotspot-info .HotspotAnnotation1 h3 {
+    font-family: 'Special Gothic Expanded One', sans-serif;
+  }
+
+   .hotspot-info .HotspotAnnotation1 p {
+    font-family: 'Figtree', sans-serif;
+  }
+
   .hotspot-info .HotspotAnnotation1:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
