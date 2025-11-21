@@ -1,3 +1,32 @@
+.hidden {
+    display: none;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile: 1 per row */
+  gap: 20px;
+  justify-items: center; /* centers the grid items horizontally */
+}
+
+.product-box {
+  background-color: white;
+  border: 2px solid yellow;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 350px; /* limits the box width */
+  text-align: center; /* centers text & images inside the box */
+}
+
+.product-box img {
+  max-width: 100%; /* makes image responsive */
+  height: auto;
+  display: block; /* ensures proper centering */
+  margin: 0 auto; /* centers the image horizontally */
+}
+
+
 .shop-now {
     background: linear-gradient(
     to bottom,
@@ -49,6 +78,7 @@
   color: yellow;
   cursor: pointer;
 }
+
 
 @media (min-width: 768px) {
 
