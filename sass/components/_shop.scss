@@ -49,3 +49,69 @@
   color: yellow;
   cursor: pointer;
 }
+
+@media (min-width: 768px) {
+
+    .shop-now {
+    display: flex;           /* make the container a flex row */
+    justify-content: center; /* center items horizontally */
+    align-items: center;     /* center items vertically if needed */
+    gap: 20px;               /* spacing between items, optional */
+    flex-wrap: nowrap; 
+    background: linear-gradient(
+    to bottom,
+    #a0a0a0 0%,   
+    black 30%,  
+    black 100%  
+  );
+}
+
+.shop-now h2 {
+    color: yellow;
+    font-size: 60px;
+    padding-top: 50px;
+    font-family: 'Special Gothic Expanded One', sans-serif;
+    text-align: center; /* centers text horizontally */
+    display: block;     /* default for h2, allows text-align to work */
+}
+
+
+.shop-now p {
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 23px;
+    font-family: 'Figtree', sans-serif;
+    text-align: center;
+}
+
+.preorder-section {
+  display: flex;                 
+  justify-content: center;      
+  align-items: center;         
+  height: 150px;                
+    background-color: black;
+  padding-bottom: 50px;
+}
+
+.btn-preorder a {
+  padding: 10px 20px;            
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  border: 2px solid #ffd700;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Figtree', sans-serif;
+}
+
+.btn-preorder a:hover {
+  background-color: black;
+  color: yellow;
+  cursor: pointer;
+}
+
+
+}
