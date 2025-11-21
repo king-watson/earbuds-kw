@@ -1,0 +1,188 @@
+ #hero-img {
+  width: 80%;      /* takes up container width */ /* prevents it from being huge on desktop */
+  height: auto;     /* keeps aspect ratio */
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+.hero {
+    background-color: black;
+    padding-bottom: 50px;
+}
+
+#text-col h1{
+ color: yellow;
+ padding-left: 20px;
+ font-family: 'Special Gothic Expanded One', sans-serif;
+ font-size: 29px;
+}
+
+#text-col p{
+ color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Figtree', sans-serif;
+}
+
+.btn {
+  display: inline-block;        
+  padding: 12px 24px;   
+  background-color: black;  
+  color: white;                  
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;        
+  border: 2px solid yellow;  
+  border-radius: 8px;          
+  cursor: pointer;             
+  transition: all 0.3s ease;   
+  margin-left: 20px;
+}
+
+/* Hover effect */
+.btn:hover {
+  background-color: #000;      
+  color: yellow;
+  transform: scale(1.05);   
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: black;
+  padding-bottom: 30px;
+}
+
+#hero-video {
+  width: 95%;        
+  height: auto;
+  display: block;    
+}
+
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 460.5px;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+  margin-top: 30px;
+  background-color: black;
+  margin: 0;    
+  padding: 2rem 0;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.shop-now-image {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.prev-btn,
+.next-btn {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  color: yellow;
+  margin-top: 40px;
+}
+
+.prev-btn { left: 0; }
+.next-btn { right: 0; }
+
+@media (min-width: 768px) {
+  .carousel-container {
+    display: none;
+  }
+
+  .carousel-track {
+    display: none;
+  }
+
+  .shop-now-image {
+    display: none;
+  }
+
+  .prev-btn,
+  .next-btn {
+    display: none;
+  }
+}
+
+#explode-view {
+  max-width: 100%;
+  width: 100vw; 
+}
+
+.circle {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%; 
+  border: 5px solid yellow; 
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  font-size: 75px;
+  font-weight: bold;
+  color: yellow;
+  background-color: black; 
+  margin-left: 50px;
+  margin-top: 30px;
+  animation: vibrate 3s linear infinite;
+}
+
+.circle-background {
+    background-color: black;
+}
+
+.about-text {
+    background: linear-gradient(
+    to bottom,
+    black 0%,   
+    black 80%,  
+    #a0a0a0 100%  
+  );
+}
+
+.about-text h2 {
+    color: yellow;
+    padding-top: 30px;
+    text-align: center;
+    font-family: 'Special Gothic Expanded One', sans-serif;
+     font-size: 20px;
+}
+
+.about-text p {
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 75px;
+    font-family: 'Figtree', sans-serif;
+}
+
+@keyframes vibrate {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-2px, -2px); }
+  80% { transform: translate(2px, 2px); }
+  100% { transform: translate(0, 0); }
+}
