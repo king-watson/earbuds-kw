@@ -34,37 +34,23 @@ image: "images/360.jpg"
     }
   ]
 
-  //function
-
   function loadInfo() {
     infoBoxes.forEach((infoBox, index)=>{
-      // console.log(index+1);
-      //selected will be the infobox on our page, eg.hotspot-1, hotspot-2 etc.
       let selected = document.querySelector(`#hotspot-${index+1}`);
       console.log(selected);
 
 
-      //lets create an h2
+     
       const titleElement = document.createElement('h2');  
-      //lets populate the h2
       titleElement.textContent = infoBox.title;
-
-      //lets create a p
       const textElement = document.createElement('p');
-      //lets populate the paragraph
       textElement.textContent = infoBox.text;
-
-      //lets add the h2 to the selected hotspot
       selected.appendChild(titleElement);
-      //lets add the p to the selected hotspot
       selected.appendChild(textElement);
 
-     
-
-
- const imageElement = document.createElement('img'); // create new img
-    imageElement.src = infoBox.image; // set source
-    selected.appendChild(imageElement); // add to the hotspot
+ const imageElement = document.createElement('img'); 
+    imageElement.src = infoBox.image; 
+    selected.appendChild(imageElement); 
 
 
 
@@ -73,16 +59,11 @@ image: "images/360.jpg"
 
 
    function showInfo() {
-    //console.log(this.slot);
-    //console.log(`#${this.slot}`);
-    //since the slot value matches the id value I can use the slot value as a selector to get to the div I want.
     let selected = document.querySelector(`#${this.slot}`);
     gsap.to(selected, { duration: 1, autoAlpha: 1 });
   }
 
   function hideInfo() {
-    //console.log(this.slot);
-    //console.log(`#${this.slot}`);
     let selected = document.querySelector(`#${this.slot}`);
     gsap.to(selected, { duration: 1, autoAlpha: 0 });
   }
@@ -118,41 +99,6 @@ loadInfo();
     
 })();
 
-
-const track = document.querySelector(".carousel-track");
-const slides = document.querySelectorAll(".shop-now-image");
-const nextButton = document.querySelector(".next-btn");
-const prevButton = document.querySelector(".prev-btn");
-
-let currentIndex = 0;
-
-function updateCarousel() {
-  const slideWidth = slides[0].getBoundingClientRect().width;
-  track.style.transform = "translateX(" + (-currentIndex * slideWidth) + "px)";
-}
-
-function handleNextClick() {
-  if (currentIndex >= slides.length - 1) {
-    currentIndex = 0;
-  } else {
-    currentIndex = currentIndex + 1;
-  }
-  updateCarousel();
-}
-
-function handlePrevClick() {
-  if (currentIndex <= 0) {
-    currentIndex = slides.length - 1;
-  } else {
-    currentIndex = currentIndex - 1;
-  }
-  updateCarousel();
-}
-
-nextButton.addEventListener("click", handleNextClick);
-prevButton.addEventListener("click", handlePrevClick);
-window.addEventListener("resize", updateCarousel);
-
 (() => {
     console.log("IIFE Called");
 
@@ -162,28 +108,20 @@ window.addEventListener("resize", updateCarousel);
     canvas.width = 1920;
     canvas.height = 1080;
 
-    // Set this to the total number of frames you have
     const frameCount = 218;
 
-    // Array to hold all images
     const images = [];
-
-    // Object to hold current frame
     const buds = {
         frame: 0
     }
 
-    // Populate the images array
     for (let i = 0; i < frameCount; i++) {
         const img = new Image();
-        // Use your filename pattern
         img.src = `images/scrolling-earbuds${(i+1).toString().padStart(3, '0')}.webp`;
         images.push(img);
     }
 
     console.log(images);
-
-    // Animate frame on scroll with GSAP
     gsap.to(buds, {
         frame: frameCount - 1,
         snap: "frame",
@@ -204,4 +142,22 @@ window.addEventListener("resize", updateCarousel);
         context.drawImage(images[buds.frame], 0, 0);
     }
 
+})();
+
+(() => {
+
+    const divisor = document.querySelector("#divisor");
+    const slider = document.querySelector("#slider");
+
+    function moveDivisor() {
+        // console.log(slider.value);
+        divisor.style.width = `${slider.value}%`;
+    }
+
+    function resetSlider() {
+        slider.value = 50;
+    }
+
+    slider.addEventListener("input", moveDivisor);
+    window.addEventListener("load", resetSlider);
 })();
