@@ -150,7 +150,10 @@ loadInfo();
     const slider = document.querySelector("#slider");
 
     function moveDivisor() {
+<<<<<<< Updated upstream
         // console.log(slider.value);
+=======
+>>>>>>> Stashed changes
         divisor.style.width = `${slider.value}%`;
     }
 
