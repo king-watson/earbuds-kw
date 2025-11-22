@@ -1,7 +1,7 @@
 #xray {
   position: relative;
   aspect-ratio: 16/10;
-  background-image: url(../images/scrolling-buds000.webp);
+  background-image: url(../images/see-through-earbud.png);
   background-size: cover;
   border-radius: 15px;
 }
@@ -11,7 +11,7 @@
   top: 0;
   left: 0;
   aspect-ratio: 16/10;
-  background-image: url(../images/scrolling-buds067.webp);
+  background-image: url(../images/earbud-x-ray.png);
   background-size: cover;
   width: 50%;
   height: 100%;
@@ -71,4 +71,21 @@ input[type=range]::-moz-range-thumb {
   border-radius: 50%;
   border: none;
   cursor: pointer;
+}
+
+#new-design {
+  text-align: center;
+}
+
+#new-design h4{
+ font-family: 'Special Gothic Expanded One', sans-serif;
+ color: yellow;
+ font-size: 30px;
+}
+
+#new-design p{
+font-family: 'Figtree', sans-serif;
+ color: white;
+ font-size: 16px;
+ padding-bottom: 20px;
 }
