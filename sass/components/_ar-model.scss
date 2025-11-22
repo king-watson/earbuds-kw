@@ -97,7 +97,7 @@ opacity: 0;
     border-radius: 8px;
     padding: 1rem 1.25rem;
     margin-bottom: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px black;
     color: #FFD700; 
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
@@ -135,4 +135,15 @@ opacity: 0;
     display: none;
   }
 }
+
+/* Desktop & Tablet */
+@media (max-width: 1200px) {
+  model-viewer {
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+
+}
+
 
